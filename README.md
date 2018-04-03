@@ -1,8 +1,7 @@
 # My Config
 
-
-## .bashrc
-```
+### .bashrc
+```bash
 #
 # ~/.bashrc
 #
