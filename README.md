@@ -13,13 +13,8 @@
 source ~/.completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
-git_branch() {
-  __git_ps1 '[$s]'
-}
-
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 PS1='\[$(tput bold)\]\[$(tput setaf 3)\][\t]\n\[$(tput setaf 2)\][\[$(tput setaf 2)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 6)\]\h\[$(tput setaf 6)\]\[$(tput setaf 2)\]] \[$(tput setaf 4)\]\w\[$(tput setaf 2)\] $(__git_ps1 "[%s]") \n└─ \$ \[$(tput sgr0)\]'
-#PROMPT_COMMAND="\[$(tput bold)\]\[$(tput setaf 3)\][\t]\n\[$(tput setaf 2)\][\[$(tput setaf 2)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 6)\]\h\[$(tput setaf 6)\]\[$(tput setaf 2)\]] \[$(tput setaf 4)\]\w\[$(tput setaf 2)\] $(__git_ps1 "[%s]") \n└─ \$ \[$(tput sgr0)\]"
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -112,7 +107,7 @@ export ANDROID_HOME=${HOME}/dev/ides/android-sdk-linux
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-export VISUAL="vim" 
+export VISUAL="vim"
 
 export EDITOR="$VISUAL"
 export GIT_EDITOR=$VISUAL
@@ -121,4 +116,15 @@ export TRANSMISSION_WEB_HOME="/home/gomes/tmp/react-transmission.0.1.0"
 
 export WORKON_HOME="/home/gomes/dev/workspaces/virtual_envs"
 source /usr/bin/virtualenvwrapper.sh
+```
+
+### .bash_profile
+```bash
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+export LC_ALL=en_US.UTF-8
 ```
